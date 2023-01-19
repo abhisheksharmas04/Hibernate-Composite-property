@@ -25,10 +25,10 @@ public class CompositeIdSaveObjectTest {
 				projectInfo.setProjName("QMS");
 				projectInfo.setTeamSize(100);
 
-				ProgrammerProjId idVal = (ProgrammerProjId) session.save(projectInfo);
+				session.save(projectInfo);
 				tx.commit();
 
-				System.out.println("ID: " + idVal);
+				System.out.println("ID: ");
 
 			} catch (HibernateException hbe) {
 				hbe.printStackTrace();
