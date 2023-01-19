@@ -1,0 +1,7 @@
+Using @Embeddable, @EmbeddedId annotations for this.
+
+@Embeddable: to place on the top of ID class indicating that this is not a entity class it is Embaddable 
+id class to entity class.
+
+@EmbeddedId: to configure special id proerty as the composite id.
+NOTE:: Generater configuration to generate the ID value is posssible only while working with singular Id field, not while working with composite id field.
