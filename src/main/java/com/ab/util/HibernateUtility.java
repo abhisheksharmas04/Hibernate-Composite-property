@@ -15,7 +15,7 @@ public class HibernateUtility {
 			// configure object
 			Configuration configuration = new Configuration();
 			StandardServiceRegistryBuilder serviceRegistery = new StandardServiceRegistryBuilder();
-			StandardServiceRegistry register = serviceRegistery.configure("com/ab/config/hibernate.cfg.xml").build();
+			StandardServiceRegistry register = serviceRegistery.configure("cfg.xml").build();
 			// build session factory
 			sessionFactory = configuration.buildSessionFactory(register);
 		} catch (HibernateException he) {

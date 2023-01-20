@@ -1,52 +1,22 @@
 package com.ab.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data @AllArgsConstructor @NoArgsConstructor
+@Entity @Table(name = "PROGRAMMER_PROJECT_INFO")
 public class ProgrammerProjectInfo {
+	@EmbeddedId
 	private ProgrammerProjId id; // Has a property
-	private String pname;
+	@Column(name = "PERSON_NAME", length = 20)
+	private String personName;
+	@Column(name = "PROJECT_NAME", length = 20)
 	private String projName;
+	@Column(name = "TEAM_SIZE")
 	private Integer teamSize;
-
-	public ProgrammerProjectInfo() {
-	}
-
-	public ProgrammerProjectInfo(ProgrammerProjId id, String pname, String projName, Integer teamSize) {
-		super();
-		this.id = id;
-		this.pname = pname;
-		this.projName = projName;
-		this.teamSize = teamSize;
-	}
-
-	public ProgrammerProjId getId() {
-		return id;
-	}
-
-	public void setId(ProgrammerProjId id) {
-		this.id = id;
-	}
-
-	public String getPname() {
-		return pname;
-	}
-
-	public void setPname(String pname) {
-		this.pname = pname;
-	}
-
-	public String getProjName() {
-		return projName;
-	}
-
-	public void setProjName(String projName) {
-		this.projName = projName;
-	}
-
-	public Integer getTeamSize() {
-		return teamSize;
-	}
-
-	public void setTeamSize(Integer teamSize) {
-		this.teamSize = teamSize;
-	}
-
 }

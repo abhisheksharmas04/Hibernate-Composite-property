@@ -1,0 +1,9 @@
+Annotation driven composite key:
+	--> use "@Embeddable", "@EmbeddedId" annotation for this.
+	--> @Embeddable : To place on the top of Id class indicating that this is not a Entity class it is Embeddable id class to entity class.
+
+	-->@EmbeddedId: To configure Id property as the composite Id.
+
+	--> note:: Generator configuration like Increment to generate the Id value is possible only while working with singular id field, not while working with Composite id field.
+
+	--> @Type(int) is hibernate supplied Annotation specify the hibernate data type and it is optional to specify. Hibernate datatypes are bridge data type between java datatype and underlying Db s/w sql data type. They give instruction to hibernate framework to generate or alter the db table.

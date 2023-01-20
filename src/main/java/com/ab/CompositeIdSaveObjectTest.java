@@ -16,19 +16,19 @@ public class CompositeIdSaveObjectTest {
 			try {
 				Transaction tx = session.beginTransaction();
 				ProgrammerProjId pId = new ProgrammerProjId();
-				pId.setPid(101);
+				pId.setPid(102);
 				pId.setProjId(1001);
 
 				ProgrammerProjectInfo projectInfo = new ProgrammerProjectInfo();
 				projectInfo.setId(pId);
-				projectInfo.setPname("Raj");
+				projectInfo.setPersonName("Raj");
 				projectInfo.setProjName("QMS");
 				projectInfo.setTeamSize(100);
 
 				session.save(projectInfo);
 				tx.commit();
 
-				System.out.println("ID: ");
+				System.out.println("ID: " + projectInfo);
 
 			} catch (HibernateException hbe) {
 				hbe.printStackTrace();

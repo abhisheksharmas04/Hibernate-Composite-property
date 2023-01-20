@@ -1,36 +1,20 @@
 package com.ab.entity;
 
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
+
 import java.io.Serializable;
 
+@Data @AllArgsConstructor @NoArgsConstructor
+@Embeddable
 public class ProgrammerProjId implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+// here by using length properties we can control the length.
+	//@Type(int)
 	private Integer pid;
 	private Integer projId;
-
-	public ProgrammerProjId() {
-	}
-
-	public ProgrammerProjId(Integer pid, Integer projId) {
-		super();
-		this.pid = pid;
-		this.projId = projId;
-	}
-
-	public Integer getPid() {
-		return pid;
-	}
-
-	public void setPid(Integer pid) {
-		this.pid = pid;
-	}
-
-	public Integer getProjId() {
-		return projId;
-	}
-
-	public void setProjId(Integer projId) {
-		this.projId = projId;
-	}
 
 }
